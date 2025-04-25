@@ -1,0 +1,163 @@
+The following package versions were used to run the benchmark analyses on the serial queue of the linux-cluster 
+operated by the Leibniz Supercomputing Centre of the Bavarian Academy of Sciences and Humanities.
+
+> devtools::session_info()
+─ Session info ───────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 3.5.0 (2018-04-23)
+ os       SUSE Linux Enterprise Server 12 SP3
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  de_DE.UTF-8
+ ctype    de_DE.UTF-8
+ tz       Europe/Berlin
+ date     2019-06-27
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────
+ package      * version   date       lib source
+ assertthat     0.2.0     2017-04-11 [1] CRAN (R 3.5.0)
+ backports      1.1.3     2018-12-14 [1] CRAN (R 3.5.0)
+ base64url      1.4       2018-05-14 [1] CRAN (R 3.5.0)
+ batchtools   * 0.9.11    2019-01-30 [1] Github (mllg/batchtools@da3988e)
+ BBmisc         1.11      2019-01-30 [1] Github (berndbischl/BBmisc@a5a4e45)
+ brew           1.0-6     2011-04-13 [1] CRAN (R 3.5.0)
+ callr          3.1.1     2018-12-21 [1] CRAN (R 3.5.0)
+ checkmate      1.9.1     2019-01-15 [1] CRAN (R 3.5.0)
+ cli            1.0.1     2018-09-25 [1] CRAN (R 3.5.0)
+ codetools      0.2-15    2016-10-05 [2] CRAN (R 3.5.0)
+ colorspace     1.4-0     2019-01-13 [1] CRAN (R 3.5.0)
+ crayon         1.3.4     2017-09-16 [1] CRAN (R 3.5.0)
+ data.table   * 1.12.0    2019-01-13 [1] CRAN (R 3.5.0)
+ desc           1.2.0     2018-05-01 [1] CRAN (R 3.5.0)
+ devtools       2.0.1     2018-10-26 [1] CRAN (R 3.5.0)
+ digest         0.6.18    2018-10-10 [1] CRAN (R 3.5.0)
+ fastmatch      1.1-0     2017-01-28 [1] CRAN (R 3.5.0)
+ foreach        1.4.4     2017-12-12 [1] CRAN (R 3.5.0)
+ foreign      * 0.8-71    2018-07-20 [1] CRAN (R 3.5.0)
+ fs             1.2.6     2018-08-23 [1] CRAN (R 3.5.0)
+ ggplot2        3.1.0     2018-10-25 [1] CRAN (R 3.5.0)
+ glmnet         2.0-16    2018-04-02 [1] CRAN (R 3.5.0)
+ glue           1.3.0     2018-07-17 [1] CRAN (R 3.5.0)
+ gtable         0.2.0     2016-02-26 [1] CRAN (R 3.5.0)
+ hms            0.4.2     2018-03-10 [1] CRAN (R 3.5.0)
+ iterators      1.0.10    2018-07-13 [1] CRAN (R 3.5.0)
+ lattice        0.20-35   2017-03-25 [2] CRAN (R 3.5.0)
+ lazyeval       0.2.1     2017-10-29 [1] CRAN (R 3.5.0)
+ lubridate    * 1.7.4     2018-04-11 [1] CRAN (R 3.5.0)
+ magrittr       1.5       2014-11-22 [1] CRAN (R 3.5.0)
+ Matrix         1.2-14    2018-04-13 [2] CRAN (R 3.5.0)
+ memoise        1.1.0     2017-04-21 [1] CRAN (R 3.5.0)
+ mlr          * 2.13.9000 2019-01-30 [1] Github (mlr-org/mlr@3b846ea)
+ munsell        0.5.0     2018-06-12 [1] CRAN (R 3.5.0)
+ parallelMap    1.4       2019-01-30 [1] Github (berndbischl/parallelMap@101b91d)
+ ParamHelpers * 1.13      2019-01-30 [1] Github (berndbischl/ParamHelpers@649d128)
+ pillar         1.3.1     2018-12-15 [1] CRAN (R 3.5.0)
+ pkgbuild       1.0.2     2018-10-16 [1] CRAN (R 3.5.0)
+ pkgconfig      2.0.2     2018-08-16 [1] CRAN (R 3.5.0)
+ pkgload        1.0.2     2018-10-29 [1] CRAN (R 3.5.0)
+ plyr           1.8.4     2016-06-08 [1] CRAN (R 3.5.0)
+ prettyunits    1.0.2     2015-07-13 [1] CRAN (R 3.5.0)
+ processx       3.2.1     2018-12-05 [1] CRAN (R 3.5.0)
+ progress       1.2.0     2018-06-14 [1] CRAN (R 3.5.0)
+ ps             1.3.0     2018-12-21 [1] CRAN (R 3.5.0)
+ R6             2.3.0     2018-10-04 [1] CRAN (R 3.5.0)
+ ranger         0.11.1    2019-01-30 [1] Github (imbs-hl/ranger@82b7b24)
+ rappdirs       0.3.1     2016-03-28 [1] CRAN (R 3.5.0)
+ Rcpp           1.0.0     2018-11-07 [1] CRAN (R 3.5.0)
+ remotes        2.0.2     2018-10-30 [1] CRAN (R 3.5.0)
+ rlang          0.3.1     2019-01-08 [1] CRAN (R 3.5.0)
+ rprojroot      1.3-2     2018-01-03 [1] CRAN (R 3.5.0)
+ scales         1.0.0     2018-08-09 [1] CRAN (R 3.5.0)
+ sessioninfo    1.1.1     2018-11-05 [1] CRAN (R 3.5.0)
+ stringi        1.2.4     2018-07-20 [1] CRAN (R 3.5.0)
+ stringr        1.3.1     2018-05-10 [1] CRAN (R 3.5.0)
+ survival       2.41-3    2017-04-04 [2] CRAN (R 3.5.0)
+ testthat       2.0.1     2018-10-13 [1] CRAN (R 3.5.0)
+ tibble         2.0.1     2019-01-12 [1] CRAN (R 3.5.0)
+ usethis        1.4.0     2018-08-14 [1] CRAN (R 3.5.0)
+ withr          2.1.2     2018-03-15 [1] CRAN (R 3.5.0)
+ XML            3.98-1.16 2018-08-19 [1] CRAN (R 3.5.0)
+
+
+The following package versions were used to run all remaining analyses, compute graphics
+and process the results of the benchmark experiment on a local computer. 
+
+> devtools::session_info()
+Session info ----------------------------------------------------------------------------------------------------------------------------------------
+ setting  value                       
+ version  R version 3.5.1 (2018-07-02)
+ system   x86_64, darwin15.6.0        
+ ui       RStudio (1.2.1335)          
+ language (EN)                        
+ collate  de_DE.UTF-8                 
+ tz       Europe/Berlin               
+ date     2019-06-28                  
+
+Packages --------------------------------------------------------------------------------------------------------------------------------------------
+ package      * version    date       source                                   
+ assertthat     0.2.1      2019-03-21 cran (@0.2.1)                            
+ backports      1.1.4      2019-04-10 cran (@1.1.4)                            
+ base         * 3.5.1      2018-07-05 local                                    
+ base64url      1.4        2018-05-14 CRAN (R 3.5.0)                           
+ batchtools   * 0.9.11     2018-08-16 CRAN (R 3.5.0)                           
+ BBmisc         1.11       2018-11-07 Github (berndbischl/BBmisc@a5a4e45)      
+ brew           1.0-6      2011-04-13 CRAN (R 3.5.0)                           
+ checkmate      1.9.1      2019-01-15 cran (@1.9.1)                            
+ colorspace     1.3-2      2016-12-14 CRAN (R 3.5.0)                           
+ compiler       3.5.1      2018-07-05 local                                    
+ crayon         1.3.4      2017-09-16 CRAN (R 3.5.0)                           
+ data.table   * 1.12.0     2019-01-13 CRAN (R 3.5.2)                           
+ datasets     * 3.5.1      2018-07-05 local                                    
+ devtools       1.13.6     2018-06-27 CRAN (R 3.5.0)                           
+ digest         0.6.18     2018-10-10 CRAN (R 3.5.0)                           
+ dplyr          0.8.1      2019-05-14 cran (@0.8.1)                            
+ fastmatch      1.1-0      2017-01-28 CRAN (R 3.5.0)                           
+ foreign      * 0.8-71     2018-07-20 CRAN (R 3.5.0)                           
+ ggplot2      * 3.1.1      2019-04-07 cran (@3.1.1)                            
+ glue           1.3.1.9000 2019-06-05 Github (tidyverse/glue@ea0edcb)          
+ graphics     * 3.5.1      2018-07-05 local                                    
+ grDevices    * 3.5.1      2018-07-05 local                                    
+ grid           3.5.1      2018-07-05 local                                    
+ gtable         0.3.0      2019-03-25 cran (@0.3.0)                            
+ hms            0.4.2      2018-03-10 CRAN (R 3.5.0)                           
+ lattice        0.20-35    2017-03-25 CRAN (R 3.5.1)                           
+ lavaan       * 0.6-3      2018-09-22 cran (@0.6-3)                            
+ lazyeval       0.2.2      2019-03-15 cran (@0.2.2)                            
+ lubridate    * 1.7.4      2018-04-11 CRAN (R 3.5.0)                           
+ magrittr       1.5        2014-11-22 CRAN (R 3.5.0)                           
+ Matrix         1.2-14     2018-04-13 CRAN (R 3.5.1)                           
+ MBESS        * 4.5.1      2019-05-17 cran (@4.5.1)                            
+ memoise        1.1.0      2017-04-21 CRAN (R 3.5.0)                           
+ methods      * 3.5.1      2018-07-05 local                                    
+ mlr          * 2.13.9000  2019-02-01 Github (mlr-org/mlr@b187749)             
+ mnormt         1.5-5      2016-10-15 cran (@1.5-5)                            
+ munsell        0.5.0      2018-06-12 CRAN (R 3.5.0)                           
+ packrat        0.5.0      2018-11-14 CRAN (R 3.5.0)                           
+ parallel       3.5.1      2018-07-05 local                                    
+ parallelMap    1.4        2018-11-07 Github (berndbischl/parallelMap@101b91d) 
+ ParamHelpers * 1.13       2019-02-01 Github (berndbischl/ParamHelpers@649d128)
+ pbivnorm       0.6.0      2015-01-23 cran (@0.6.0)                            
+ pillar         1.3.1      2018-12-15 cran (@1.3.1)                            
+ pkgconfig      2.0.2      2018-08-16 CRAN (R 3.5.0)                           
+ plyr           1.8.4      2016-06-08 CRAN (R 3.5.0)                           
+ prettyunits    1.0.2      2015-07-13 CRAN (R 3.5.0)                           
+ progress       1.2.2      2019-05-16 cran (@1.2.2)                            
+ purrr          0.3.2      2019-03-15 cran (@0.3.2)                            
+ R6             2.4.0      2019-02-14 cran (@2.4.0)                            
+ rappdirs       0.3.1      2016-03-28 CRAN (R 3.5.0)                           
+ Rcpp           1.0.1      2019-03-17 cran (@1.0.1)                            
+ rlang          0.3.4      2019-04-07 cran (@0.3.4)                            
+ rstudioapi     0.10       2019-03-19 cran (@0.10)                             
+ scales         1.0.0      2018-08-09 CRAN (R 3.5.0)                           
+ splines        3.5.1      2018-07-05 local                                    
+ stats        * 3.5.1      2018-07-05 local                                    
+ stats4         3.5.1      2018-07-05 local                                    
+ stringi        1.4.3      2019-03-12 cran (@1.4.3)                            
+ stringr        1.4.0      2019-02-10 cran (@1.4.0)                            
+ survival       2.42-3     2018-04-16 CRAN (R 3.5.1)                           
+ tibble         2.1.1      2019-03-16 cran (@2.1.1)                            
+ tidyselect     0.2.5      2018-10-11 CRAN (R 3.5.0)                           
+ tools          3.5.1      2018-07-05 local                                    
+ utils        * 3.5.1      2018-07-05 local                                    
+ withr          2.1.2      2018-03-15 CRAN (R 3.5.0)
